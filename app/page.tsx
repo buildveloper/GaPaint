@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { company, services, reviews } from '../components/siteData';
+import { company, services, reviews, photos } from '../components/siteData';
 
 export default function Home() {
   return (
@@ -13,15 +13,11 @@ export default function Home() {
             14,000 sq.ft. repair facility.
           </p>
           <div className='mt-8 flex flex-wrap gap-3'>
-            <Link href='/contact' className='btn-primary'>
-              Schedule Free Estimate
-            </Link>
-            <a href='tel:+17709320742' className='btn-ghost'>
-              Call {company.phone}
-            </a>
+            <Link href='/contact' className='btn-primary'>Schedule Free Estimate</Link>
+            <a href='tel:+17709320742' className='btn-ghost'>Call {company.phone}</a>
           </div>
         </div>
-        <div className='photo-placeholder h-72'>Shop Hero Photo Placeholder</div>
+        <img src={photos.hero} alt='Auto body technician refinishing a car panel' className='h-72 w-full rounded-2xl object-cover' />
       </section>
 
       <section className='section grid md:grid-cols-3 gap-4'>

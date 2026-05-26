@@ -1,3 +1,5 @@
+import { photos } from '../../components/siteData';
+
 export default function About() {
   return (
     <main className='section'>
@@ -24,9 +26,9 @@ export default function About() {
         </div>
       </div>
       <div className='mt-8 grid md:grid-cols-3 gap-4'>
-        <div className='photo-placeholder h-44'>Owner Photo Placeholder</div>
-        <div className='photo-placeholder h-44'>Manager Photo Placeholder</div>
-        <div className='photo-placeholder h-44'>Facility Photo Placeholder</div>
+        <img src={photos.owner} alt='Business owner portrait' className='h-44 w-full rounded-2xl object-cover' />
+        <img src={photos.manager} alt='Shop manager portrait' className='h-44 w-full rounded-2xl object-cover' />
+        <img src={photos.facility} alt='Auto body repair facility exterior' className='h-44 w-full rounded-2xl object-cover' />
       </div>
     </main>
   );
