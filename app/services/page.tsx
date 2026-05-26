@@ -1,0 +1,25 @@
+import { services } from '../../components/siteData';
+
+export default function Services() {
+  return (
+    <main className='section'>
+      <h1 className='h1'>All Collision Repair & Auto Body Services</h1>
+      <p className='mt-4'>Comprehensive solutions under one roof.</p>
+      <div className='mt-8 grid md:grid-cols-2 gap-4'>
+        {services.map((s) => (
+          <article className='glass p-6' key={s}>
+            <div className='photo-placeholder h-32 mb-4'>Service Photo Placeholder</div>
+            <h2 className='font-semibold'>{s}</h2>
+            <p className='mt-2 text-sm'>
+              Benefits: safety, value retention, and flawless appearance. Process: inspect, repair,
+              refinish, quality-check, and deliver.
+            </p>
+            <a href='/contact' className='mt-3 inline-block text-amber-500'>
+              Request Estimate →
+            </a>
+          </article>
+        ))}
+      </div>
+    </main>
+  );
+}

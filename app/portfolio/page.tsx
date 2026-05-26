@@ -1,0 +1,24 @@
+const items = [
+  ['Collision Rebuild', 'Frame correction and paint restoration'],
+  ['Dent & PDR', 'Door dents removed with invisible blending'],
+  ['Bumper/Fender Repair', 'OEM-style panel fit and finish'],
+  ['Hail Damage', 'Multi-panel refinishing and polish']
+];
+
+export default function Portfolio() {
+  return (
+    <main className='section'>
+      <h1 className='h1'>Portfolio / Projects</h1>
+      <p className='mt-4'>Before-and-after caliber craftsmanship from our Suwanee shop.</p>
+      <div className='mt-8 columns-1 md:columns-2 gap-4 space-y-4'>
+        {items.map((i) => (
+          <article key={i[0]} className='glass p-6 break-inside-avoid'>
+            <div className='photo-placeholder h-40 mb-4'>Before / After Placeholder</div>
+            <h2 className='font-semibold'>{i[0]}</h2>
+            <p className='text-sm mt-2'>{i[1]}</p>
+          </article>
+        ))}
+      </div>
+    </main>
+  );
+}
