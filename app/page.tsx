@@ -1,2 +1,56 @@
-import Link from 'next/link';import { company,services,reviews } from '../components/siteData';
-export default function Home(){return <main><section className='section'><p className='text-amber-600 font-medium'>I-CAR Gold & Platinum • Family-Owned Since 1989</p><h1 className='h1 mt-3'>Top-Rated Collision Repair Shop in Suwanee, GA</h1><p className='mt-5 text-lg max-w-3xl'>Luxury-grade workmanship, concierge service, and precise factory-matched finishes in our 14,000 sq.ft. repair facility.</p><div className='mt-8 flex flex-wrap gap-3'><Link href='/contact' className='btn-primary'>Schedule Free Estimate</Link><a href='tel:+17709320742' className='btn-ghost'>Call {company.phone}</a></div></section><section className='section grid md:grid-cols-3 gap-4'>{['35+ Years of Experience','Lifetime Body & Paint Warranty','Works with 80+ Insurers'].map(t=><div className='glass p-6' key={t}>{t}</div>)}</section><section className='section'><h2 className='h2'>Service Highlights</h2><div className='mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4'>{services.map(s=><div key={s} className='glass p-5'>{s}</div>)}</div></section><section className='section'><h2 className='h2'>Featured Testimonials</h2><div className='mt-6 grid md:grid-cols-3 gap-4'>{reviews.slice(0,3).map(r=><blockquote key={r.name} className='glass p-6'><p>★★★★★</p><p className='mt-2 text-sm'>{r.text}</p><cite className='mt-3 block text-xs'>— {r.name}</cite></blockquote>)}</div></section></main>}
+import Link from 'next/link';
+import { company, services, reviews } from '../components/siteData';
+
+export default function Home() {
+  return (
+    <main>
+      <section className='section grid lg:grid-cols-2 gap-8 items-center'>
+        <div>
+          <p className='text-amber-600 font-medium'>I-CAR Gold & Platinum • Family-Owned Since 1989</p>
+          <h1 className='h1 mt-3'>Top-Rated Collision Repair Shop in Suwanee, GA</h1>
+          <p className='mt-5 text-lg max-w-3xl'>
+            Luxury-grade workmanship, concierge service, and precise factory-matched finishes in our
+            14,000 sq.ft. repair facility.
+          </p>
+          <div className='mt-8 flex flex-wrap gap-3'>
+            <Link href='/contact' className='btn-primary'>
+              Schedule Free Estimate
+            </Link>
+            <a href='tel:+17709320742' className='btn-ghost'>
+              Call {company.phone}
+            </a>
+          </div>
+        </div>
+        <div className='photo-placeholder h-72'>Shop Hero Photo Placeholder</div>
+      </section>
+
+      <section className='section grid md:grid-cols-3 gap-4'>
+        {['35+ Years of Experience', 'Lifetime Body & Paint Warranty', 'Works with 80+ Insurers'].map((t) => (
+          <div className='glass p-6' key={t}>{t}</div>
+        ))}
+      </section>
+
+      <section className='section'>
+        <h2 className='h2'>Service Highlights</h2>
+        <div className='mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
+          {services.map((s) => (
+            <div key={s} className='glass p-5'>{s}</div>
+          ))}
+        </div>
+      </section>
+
+      <section className='section'>
+        <h2 className='h2'>Featured Testimonials</h2>
+        <div className='mt-6 grid md:grid-cols-3 gap-4'>
+          {reviews.slice(0, 3).map((r) => (
+            <blockquote key={r.name} className='glass p-6'>
+              <p>★★★★★</p>
+              <p className='mt-2 text-sm'>{r.text}</p>
+              <cite className='mt-3 block text-xs'>— {r.name}</cite>
+            </blockquote>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
