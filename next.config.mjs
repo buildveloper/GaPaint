@@ -1,1 +1,1 @@
-export default { images: { unoptimized: true } };
+export default { images:{unoptimized:true} };
