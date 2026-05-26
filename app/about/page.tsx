@@ -1,0 +1,1 @@
+export default function About(){return <main className='section'><h1 className='h1'>About Georgia Paint & Body</h1><p className='mt-6 max-w-3xl'>Since 1989, Georgia Paint & Body has delivered premium collision repair with a family-owned commitment to safety, craftsmanship, and exceptional client care.</p></main>}
