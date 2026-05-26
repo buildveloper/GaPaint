@@ -1,0 +1,2 @@
+import { reviews } from '../../components/siteData';
+export default function Reviews(){return <main className='section'><h1 className='h1'>Reviews & Testimonials</h1><p className='mt-4'>Trusted by local drivers with a 4.9★ reputation and consistent 5-star feedback.</p><div className='mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4'>{reviews.map(r=><article key={r.name} className='glass p-6'><p>{'★'.repeat(r.rating)}{'☆'.repeat(5-r.rating)}</p><p className='mt-2 text-sm'>{r.text}</p><p className='mt-3 text-xs font-semibold'>{r.name}</p></article>)}</div></main>}
